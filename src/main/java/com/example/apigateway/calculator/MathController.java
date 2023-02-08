@@ -53,6 +53,17 @@ public class MathController {
         return convertToDouble(numberOne) / convertToDouble(numberTwo);
     }
 
+    @RequestMapping(value = "mean/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double mean(@PathVariable(value = "numberOne") String numberOne,
+                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception {
+
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsuportedMathOperationException("Please set a numeric value");
+        }
+
+        return (convertToDouble(numberOne) + convertToDouble(numberTwo)) / 2;
+    }
+
     @RequestMapping(value = "square-root/{number}", method = RequestMethod.GET)
     public Double squareRoot(@PathVariable(value = "number") String numberOne) throws Exception {
 
