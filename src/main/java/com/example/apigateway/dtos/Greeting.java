@@ -1,4 +1,4 @@
-package com.example.apigateway.greeting;
+package com.example.apigateway.dtos;
 
 public class Greeting {
 

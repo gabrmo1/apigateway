@@ -1,6 +1,7 @@
-package com.example.apigateway.greeting;
+package com.example.apigateway.controllers;
 
 
+import com.example.apigateway.dtos.Greeting;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.atomic.AtomicLong;
