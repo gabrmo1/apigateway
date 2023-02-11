@@ -1,7 +1,7 @@
 package com.example.apigateway.controllers;
 
-import com.example.apigateway.models.MathModel;
 import com.example.apigateway.exceptions.UnsuportedMathOperationException;
+import com.example.apigateway.services.MathModel;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

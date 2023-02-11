@@ -1,4 +1,4 @@
-package com.example.apigateway.models;
+package com.example.apigateway.services;
 
 public class MathModel {
 
@@ -16,15 +16,14 @@ public class MathModel {
 
     public static Double getResult(Operation operation, Double numberOne, Double numberTwo) {
 
-        switch (operation) {
-            case sum: return numberOne + numberTwo;
-            case subtraction: return numberOne - numberTwo;
-            case multiplication: return numberOne * numberTwo;
-            case division: return numberOne / numberTwo;
-            case mean: return (numberOne + numberTwo) / 2;
-        }
+        return switch (operation) {
+            case sum -> numberOne + numberTwo;
+            case subtraction -> numberOne - numberTwo;
+            case multiplication -> numberOne * numberTwo;
+            case division -> numberOne / numberTwo;
+            case mean -> (numberOne + numberTwo) / 2;
+        };
 
-        return null;
     }
 
     public static Double convertToDouble(String strNumber) {
