@@ -1,6 +1,8 @@
 package com.example.apigateway.services;
 
+import com.example.apigateway.dtos.PersonDto;
 import com.example.apigateway.exceptions.ResourceNotFoundException;
+import com.example.apigateway.mapper.ModelMapperConverter;
 import com.example.apigateway.models.Person;
 import com.example.apigateway.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +31,17 @@ public class PersonService {
         return personRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
     }
 
-    public Person create(Person person) {
+    public PersonDto create(PersonDto person) {
         logger.info("Createing some person");
 
-        return personRepository.save(person);
+        var entity = ModelMapperConverter.parseObject(person, Person.class);
+
+        personRepository.save(entity);
+
+        return ModelMapperConverter.parseObject(entity, PersonDto.class);
     }
 
-    public Person update(Person person) {
+    public PersonDto update(PersonDto person) {
         logger.info("Updating some person");
 
         Person personEntity = personRepository.findById(person.getId()).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
@@ -45,7 +51,9 @@ public class PersonService {
         personEntity.setLastName(person.getLastName());
         personEntity.setGender(person.getGender());
 
-        return personRepository.save(personEntity);
+        personRepository.save(personEntity);
+
+        return ModelMapperConverter.parseObject(personEntity, PersonDto.class);
     }
 
     public void delete(Long id) {
@@ -55,4 +63,5 @@ public class PersonService {
 
         personRepository.delete(personEntity);
     }
+
 }
