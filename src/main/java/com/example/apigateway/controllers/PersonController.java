@@ -21,7 +21,7 @@ public class PersonController {
     @GetMapping(value = "{id}",
             produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YAML})
     public PersonDto findById(@PathVariable Long id) {
-        return ModelMapperConverter.parseObject(personService.findById(id), PersonDto.class);
+        return personService.findById(id);
     }
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YAML})
@@ -43,7 +43,8 @@ public class PersonController {
         return personService.update(person);
     }
 
-    @DeleteMapping(value = "{id}", produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YAML})
+    @DeleteMapping(value = "{id}",
+            produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YAML})
     public ResponseEntity<?> deletePerson(@PathVariable Long id) {
         personService.delete(id);
 
