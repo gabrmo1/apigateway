@@ -6,6 +6,7 @@ import com.example.apigateway.exceptions.ResourceNotFoundException;
 import com.example.apigateway.mapper.ModelMapperConverter;
 import com.example.apigateway.models.Person;
 import com.example.apigateway.repositories.PersonRepository;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
