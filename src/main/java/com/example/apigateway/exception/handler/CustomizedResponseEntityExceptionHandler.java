@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.erudio.exception.ExceptionResponse;
-import br.com.erudio.exception.InvalidJwtAuthenticationException;
-import br.com.erudio.exception.ResourceNotFoundException;
+import com.example.apigateway.exception.ExceptionResponse;
+import com.example.apigateway.exception.InvalidJwtAuthenticationException;
+import com.example.apigateway.exception.ResourceNotFoundException;
 
 @ControllerAdvice
 @RestController

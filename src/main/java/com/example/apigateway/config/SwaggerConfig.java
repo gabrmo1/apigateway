@@ -21,7 +21,7 @@ public class SwaggerConfig {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("br.com.erudio"))
+				.apis(RequestHandlerSelectors.basePackage("com.example.apigateway"))
 				.paths(PathSelectors.any())
 				.build()
 				.apiInfo(apiInfo());
@@ -33,7 +33,7 @@ public class SwaggerConfig {
 				"Some description about your API.",
 				"v1",
 				"Terms Of Service Url",
-				new Contact("Leandro Costa", "www.erudio.com.br", "your_email@gmail.com"),
+				new Contact("Gabriel Moreno", "www.google.com", "gabrielmoreno1jlle@gmail.com"),
 				"License of API", "License of URL", Collections.emptyList());
 	}
 }

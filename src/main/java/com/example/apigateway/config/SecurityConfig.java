@@ -9,8 +9,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import br.com.erudio.security.jwt.JwtConfigurer;
-import br.com.erudio.security.jwt.JwtTokenProvider;
+import com.example.apigateway.security.jwt.JwtConfigurer;
+import com.example.apigateway.security.jwt.JwtTokenProvider;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter{

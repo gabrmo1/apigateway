@@ -1,14 +1,14 @@
 package com.example.apigateway;
 
-import java.util.List;
-
 import com.example.apigateway.converter.DozerConverter;
+import com.example.apigateway.data.model.Person;
 import com.example.apigateway.data.vo.v1.PersonVO;
 import com.example.apigateway.mocks.MockPerson;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 
 
 public class DozerConverterTest {

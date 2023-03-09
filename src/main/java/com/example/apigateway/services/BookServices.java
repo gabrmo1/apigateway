@@ -5,11 +5,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import br.com.erudio.converter.DozerConverter;
-import br.com.erudio.data.model.Book;
-import br.com.erudio.data.vo.v1.BookVO;
-import br.com.erudio.exception.ResourceNotFoundException;
-import br.com.erudio.repository.BookRepository;
+import com.example.apigateway.converter.DozerConverter;
+import com.example.apigateway.data.model.Book;
+import com.example.apigateway.data.vo.v1.BookVO;
+import com.example.apigateway.exception.ResourceNotFoundException;
+import com.example.apigateway.repository.BookRepository;
 
 @Service
 public class BookServices {

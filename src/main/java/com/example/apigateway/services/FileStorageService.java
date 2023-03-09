@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import br.com.erudio.config.FileStorageConfig;
-import br.com.erudio.exception.FileStorageException;
-import br.com.erudio.exception.MyFileNotFoundException;
+import com.example.apigateway.config.FileStorageConfig;
+import com.example.apigateway.exception.FileStorageException;
+import com.example.apigateway.exception.MyFileNotFoundException;
 
 @Service
 public class FileStorageService {

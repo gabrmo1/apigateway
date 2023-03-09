@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.erudio.data.vo.v1.UploadFileResponseVO;
-import br.com.erudio.services.FileStorageService;
+import com.example.apigateway.data.vo.v1.UploadFileResponseVO;
+import com.example.apigateway.services.FileStorageService;
 import io.swagger.annotations.Api;
 
 @Api(tags = "FileEndpoint")

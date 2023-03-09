@@ -3,8 +3,8 @@ package com.example.apigateway.mocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.erudio.data.model.Person;
-import br.com.erudio.data.vo.v1.PersonVO;
+import com.example.apigateway.data.model.Person;
+import com.example.apigateway.data.vo.v1.PersonVO;
 
 public class MockPerson {
 

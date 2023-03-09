@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.erudio.data.vo.v1.PersonVO;
-import br.com.erudio.services.PersonServices;
+import com.example.apigateway.data.vo.v1.PersonVO;
+import com.example.apigateway.services.PersonServices;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 

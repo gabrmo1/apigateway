@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.erudio.repository.UserRepository;
-import br.com.erudio.security.AccountCredentialsVO;
-import br.com.erudio.security.jwt.JwtTokenProvider;
+import com.example.apigateway.repository.UserRepository;
+import com.example.apigateway.security.AccountCredentialsVO;
+import com.example.apigateway.security.jwt.JwtTokenProvider;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 

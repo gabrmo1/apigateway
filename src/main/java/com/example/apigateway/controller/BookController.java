@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.erudio.data.vo.v1.BookVO;
-import br.com.erudio.services.BookServices;
+import com.example.apigateway.data.vo.v1.BookVO;
+import com.example.apigateway.services.BookServices;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
